@@ -89,7 +89,6 @@ func main() {
 		address := fmt.Sprintf("0.0.0.0:%d", config.GetConfigs().Port)
 
 		if err := e.Start(address); err != nil {
-			//todo - create concept logger first, then log this
 			log.Error("server failed to start")
 		}
 	}()
@@ -101,7 +100,6 @@ func main() {
 	defer cancel()
 
 	if err := e.Shutdown(ctx); err != nil {
-		//todo - create concept logger first, then log this
 		log.Error("server stopped immediately")
 	}
 }
