@@ -7,7 +7,7 @@ import (
 )
 
 type Router struct {
-	UserController user.Controller
+	UserController *user.Controller
 	Echo           *echo.Echo
 }
 
